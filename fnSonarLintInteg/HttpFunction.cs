@@ -20,7 +20,7 @@ namespace fnSonarLintInteg
             log.LogInformation("C# HTTP trigger function processed a request.");
 
             string name = req.Query["name"];
-
+            string divya = "";
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
