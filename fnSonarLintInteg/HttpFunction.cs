@@ -21,6 +21,9 @@ namespace fnSonarLintInteg
 
             string name = req.Query["name"];
             string divya = "";
+            divya = "";
+            string a, b, c;
+            string d, e, f;
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
